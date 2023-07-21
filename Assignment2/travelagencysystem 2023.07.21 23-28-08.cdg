@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="travelagencysystem">
+  <ClassDiagramComponents>
+    <Class name="DatabaseConnection" package="travelagencysystem" visibility="public" xPosition="294.0" yPosition="372.0">
+      <Fields>
+        <Field name="connection" type="Connection" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TestClass" package="travelagencysystem" visibility="public" xPosition="294.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TravelAgency" package="travelagencysystem" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="country" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="priceList" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="newConnection" type="DatabaseConnection" visibility="private"/>
+        <Field name="connectDB" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="protected"/>
+        <Constructor visibility="protected">
+          <Argument type="String" name="tourType"/>
+          <Argument type="String" name="country"/>
+          <Argument type="String" name="state"/>
+          <Argument type="String" name="season"/>
+        </Constructor>
+        <Constructor visibility="protected">
+          <Argument type="String" name="tourType"/>
+          <Argument type="String" name="country"/>
+          <Argument type="String" name="state"/>
+          <Argument type="int" name="tourState"/>
+          <Argument type="int" name="duration"/>
+          <Argument type="String" name="ticket"/>
+          <Argument type="int" name="price"/>
+          <Argument type="String" name="season"/>
+        </Constructor>
+        <Constructor visibility="protected">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="id2"/>
+          <Argument type="String" name="tourType"/>
+          <Argument type="String" name="country"/>
+          <Argument type="String" name="state"/>
+          <Argument type="int" name="tourState"/>
+          <Argument type="int" name="duration"/>
+          <Argument type="String" name="ticket"/>
+          <Argument type="int" name="price"/>
+          <Argument type="String" name="season"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getID" returnType="int" visibility="protected"/>
+        <Method name="getID2" returnType="int" visibility="protected"/>
+        <Method name="getCountry" returnType="String" visibility="protected"/>
+        <Method name="getState" returnType="String" visibility="protected"/>
+        <Method name="getDuration" returnType="int" visibility="protected"/>
+        <Method name="getTourState" returnType="int" visibility="protected"/>
+        <Method name="getTourType" returnType="String" visibility="protected"/>
+        <Method name="getSeason" returnType="String" visibility="protected"/>
+        <Method name="getTicketType" returnType="String" visibility="protected"/>
+        <Method name="getPrice" returnType="int" visibility="protected"/>
+        <Method name="setID" returnType="int" visibility="protected">
+          <Argument type="int" name="newID"/>
+        </Method>
+        <Method name="setID2" returnType="int" visibility="protected">
+          <Argument type="int" name="newID2"/>
+        </Method>
+        <Method name="setCountry" returnType="String" visibility="protected">
+          <Argument type="String" name="newCountry"/>
+        </Method>
+        <Method name="setState" returnType="String" visibility="protected">
+          <Argument type="String" name="newState"/>
+        </Method>
+        <Method name="setDuration" returnType="int" visibility="protected">
+          <Argument type="int" name="newDuration"/>
+        </Method>
+        <Method name="setTourState" returnType="int" visibility="protected">
+          <Argument type="int" name="newTourState"/>
+        </Method>
+        <Method name="setTourType" returnType="String" visibility="protected">
+          <Argument type="String" name="newTourType"/>
+        </Method>
+        <Method name="setSeason" returnType="String" visibility="protected">
+          <Argument type="String" name="newSeason"/>
+        </Method>
+        <Method name="setTicketType" returnType="String" visibility="protected">
+          <Argument type="String" name="newTicket"/>
+        </Method>
+        <Method name="setPrice" returnType="int" visibility="protected">
+          <Argument type="int" name="newPrice"/>
+        </Method>
+        <Method name="connectDatabase" returnType="void" visibility="private"/>
+        <Method name="add" returnType="void" visibility="protected"/>
+        <Method name="update" returnType="void" visibility="protected"/>
+        <Method name="delete" returnType="void" visibility="protected"/>
+        <Method name="checkTours" returnType="String" visibility="public"/>
+        <Method name="checkPrice" returnType="String" visibility="public"/>
+        <Method name="checkDuration" returnType="int" visibility="public"/>
+        <Method name="checkRepeat" returnType="boolean" visibility="public"/>
+        <Method name="checkRepeat2" returnType="boolean" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TravelAgencySystemFX
+&lt;&lt;Interface&gt;&gt;" package="travelagencysystem" visibility="public" xPosition="246.0" yPosition="648.0">
+      <Fields>
+        <Field name="newConnection" type="DatabaseConnection" visibility="private"/>
+        <Field name="connectDB" type="Connection" visibility="private"/>
+        <Field name="stage" type="Stage" visibility="private"/>
+        <Field name="mainPage" type="Scene" visibility="private"/>
+        <Field name="lbTour" type="Label" visibility="package"/>
+        <Field name="lbCountry" type="Label" visibility="package"/>
+        <Field name="lbState" type="Label" visibility="package"/>
+        <Field name="lbSeason" type="Label" visibility="package"/>
+        <Field name="tour" type="ComboBox" visibility="package"/>
+        <Field name="country" type="ComboBox" visibility="package"/>
+        <Field name="state" type="ComboBox" visibility="package"/>
+        <Field name="season" type="ComboBox" visibility="package"/>
+        <Field name="btnCheck" type="Button" visibility="package"/>
+        <Field name="gridPane" type="GridPane" visibility="package"/>
+        <Field name="hbox" type="HBox" visibility="package"/>
+        <Field name="vbox" type="VBox" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="Stage" visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="getComboBox" returnType="String" visibility="private">
+          <Argument type="String" name="item"/>
+          <Argument type="String" name="table"/>
+        </Method>
+        <Method name="getComboBox2" returnType="void" visibility="private"/>
+        <Method name="MainPage" returnType="Scene" visibility="private"/>
+        <Method name="connectDatabase" returnType="void" visibility="private"/>
+        <Method name="show" returnType="void" visibility="private"/>
+        <Method name="checkEmpty" returnType="boolean" visibility="private"/>
+        <Method name="initialLock" returnType="void" visibility="private"/>
+        <Method name="alertMSG" returnType="String" visibility="private">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="alertError" returnType="String" visibility="private">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="description"/>
+        </Method>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="newConnection" source="travelagencysystem.TravelAgency" target="travelagencysystem.DatabaseConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="newConnection" source="travelagencysystem.TravelAgencySystemFX
+&lt;&lt;Interface&gt;&gt;" target="travelagencysystem.DatabaseConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
